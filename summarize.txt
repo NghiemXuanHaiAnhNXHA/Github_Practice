@@ -1,0 +1,65 @@
+git config --global user.name "{user name}"
+git config --global user.email "{user email}"
+
+git config --global init.defaultBranch main
+
+git init
+git status
+
+git add {file name}
+git add .
+
+git commit -m "{message}"
+
+git log
+
+git checkout "commit hash"
+git checkout main
+git checkout -f main
+
+git remote add origin {link of remote repository}
+# You can have multiple remote repository, you just need to change the link of remote repository. But you need to change the name "origin" in the command into other name {something else}
+# origin or {something else} is an alias for the url of repository
+git remote add {something else} {link of remote repository}
+
+git push -u origin main
+
+git branch {branch name}
+git checkout {branch name}
+git checkout -b {branch name} # Create a branch and immediately move to it
+# When you create a new branch it will be based on the branch you are currently on. You need to ensure that you create a new branch from the correct starting point
+git branch {new branch name} {source branch}
+
+# How to write a proper
+A quality commit message is written in the imperative mood
+Eg: Improve mobile responsiveness
+Eg: Add A/B testing
+
+git push --set-upstream origin {branch name} = git push -u origin {branch name}
+# If you want to push something from your local branch to your remote branch run "git push"
+git push
+git pull
+
+git merge {branch name}
+
+Work Flow
+1. Clone the repository
+2. Create a new branch from the main or another branch
+3. Make your changes
+4. Push the branch to the remote repo
+5. Open a Pull Request
+6. Merge the changes
+7. Pull the merged changes into your local main branch
+8. Repeat from step 2
+
+git reset --soft "{commit hash}"
+git reset "{commit hash}"
+git reset --hard "{commit hash}"
+
+git revert {commit hash}
+git revert --continue
+qa!
+
+git stash
+git stash list
+git stash apply {stash name}
