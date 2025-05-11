@@ -6,6 +6,8 @@ git config --global user.email "{user email}"
 
 git config --global init.defaultBranch main
 
+git clone {link of repository}
+
 git init
 
 git status
@@ -15,6 +17,8 @@ git add {file name}
 git add .
 
 git commit -m "{message}"
+
+git commit -am "{message}" (add and commit changes, work only for modified file, not for new file created)
 
 git log
 
@@ -26,12 +30,16 @@ git checkout -f main
 
 git remote add origin {link of remote repository}
 
+git remote -v (see all the remote repo that linked to the local repo)
+
 * You can have multiple remote repository, you just need to change the link of remote repository. But you need to change the name "origin" in the command into other name {something else}
 * origin or {something else} is an alias for the url of repository
 
 git remote add {something else} {link of remote repository}
 
 git push -u origin main
+
+git branch (See all the branch of repo)
 
 git branch {branch name}
 
@@ -41,6 +49,10 @@ git checkout -b {branch name} # Create a branch and immediately move to it
 * When you create a new branch it will be based on the branch you are currently on. You need to ensure that you create a new branch from the correct starting point
 
 git branch {new branch name} {source branch}
+
+git diff {branch name} (so the different between the head branch with the {branch name})
+
+git branch -d {branch name} (delete branch)
 
 ### How to write a proper commit message
 A quality commit message is written in the imperative mood
@@ -69,6 +81,8 @@ git reset --soft "{commit hash}"
 git reset "{commit hash}"
 
 git reset --hard "{commit hash}"
+
+git reset HEAD~{number}
 
 git revert {commit hash}
 
