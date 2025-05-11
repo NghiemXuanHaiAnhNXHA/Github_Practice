@@ -1,14 +1,17 @@
 ## Git command summarize
 
 git config --global user.name "{user name}"
+
 git config --global user.email "{user email}"
 
 git config --global init.defaultBranch main
 
 git init
+
 git status
 
 git add {file name}
+
 git add .
 
 git commit -m "{message}"
@@ -16,7 +19,9 @@ git commit -m "{message}"
 git log
 
 git checkout "commit hash"
+
 git checkout main
+
 git checkout -f main
 
 git remote add origin {link of remote repository}
@@ -29,7 +34,9 @@ git remote add {something else} {link of remote repository}
 git push -u origin main
 
 git branch {branch name}
+
 git checkout {branch name}
+
 git checkout -b {branch name} # Create a branch and immediately move to it
 * When you create a new branch it will be based on the branch you are currently on. You need to ensure that you create a new branch from the correct starting point
 
@@ -42,6 +49,7 @@ git push --set-upstream origin {branch name} = git push -u origin {branch name}
 * If you want to push something from your local branch to your remote branch run "git push"
 
 git push
+
 git pull
 
 git merge {branch name}
